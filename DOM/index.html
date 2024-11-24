@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     #first{
+        padding: 10px;
+        background-color: yellow;
+        border: 1px solid gray;
+        width: fit-content;
+    }
+    #second{
+        padding: 10px;
+        margin-top: 50px;
+        background-color: yellow;
+        border: 1px solid gray;
+        width: fit-content;
+    }
+    #btn{
+        padding: 5px;
+        margin: 50px;
+        border: 5px solid green;
+        background-color: aqua;
+    }
+   </style>
+</head>
+<body>
+    <div id="first">
+        <img src="hero1.jpg" alt="" id="product">
+    </div>
+
+    <button id="btn" onclick="shift()">Shift the Product</button>
+    <div id="second">
+
+    </div>
+
+
+    <script>
+        const product = document.getElementById("product");
+        const container = document.getElementById("second");
+
+        function shift(){
+            container.appendChild(product);
+        }
+    </script>
+</body>
+</html>

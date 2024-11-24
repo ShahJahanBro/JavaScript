@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Day 01</title>
+  </head>
+  <body>
+    <h1>Welcome to the world of DOM (Document Object Model)</h1>
+    <p>
+      In JavaScript, functions are <span style="font-weight: bold; color: brown; font-size: large;">first-class objects</span>,
+      meaning they are objects themselves.
+    </p>
+
+    <img src="" alt="">
+
+    <script>
+      function greetings() {
+        console.log("Hi...");
+      }
+      greetings();
+      console.dir(greetings); //The console.dir() method is used to display an interactive list of the properties of the greetings function in the browser's developer console.
+
+      const obj = {
+        name: "Shah Jahan",
+        depart: "Coomouter Science",
+        city: "Sukkur",
+      };
+      console.log(obj.name);
+      console.dir(obj);
+
+      console.log(document.title);
+      document.title = 'An Introduction to DOM...'
+    </script>
+  </body>
+</html>
