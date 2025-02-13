@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Dom Manipulation</h1>
+
+    <div id="main">
+        <h1  id="title">Dom Learning with Shah Jahan</h1>
+        <h1 class="one">One</h1>
+        <h1 class="two">Two</h1>
+        <p class="p-class">student at SIBA</p>
+    </div>
+
+
+    <script>
+
+        const one = document.querySelector("h1");
+        document.write(one.textContent);
+
+        const two = document.querySelector("#title");
+        document.write(two.textContent);
+
+        const three = document.querySelector(".one");
+        document.write(three.textContent);
+
+        // const main = document.getElementById("main");
+        // main.style.width = "50%"
+        // main.style.backgroundColor = "yellow";
+
+        // const heading = document.getElementById("title");
+        // heading.style.color="pink";
+
+        // document.write(heading.textContent);
+        // heading.innerText = "Shah Jahan is teaching us DOM";
+       
+        // document.write(heading.textContent);
+        
+    </script>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTMLCollection vs NodeList</title>
+</head>
+<body>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <button onclick="addDiv()">Add Item</button>
+
+    <script>
+        function addDiv() {
+            let newDiv = document.createElement("div");
+            newDiv.className = "item";
+            newDiv.innerText = "New Item";
+            document.body.appendChild(newDiv);
+
+            let itemsCollection = document.getElementsByClassName("item");
+            let itemsNodeList = document.querySelectorAll(".item");
+
+            console.log("HTMLCollection Length:", itemsCollection.length); // Updates (LIVE)
+            console.log("NodeList Length:", itemsNodeList.length); // Doesn't update (STATIC)
+        }
+    </script>
+</body>
+</html>

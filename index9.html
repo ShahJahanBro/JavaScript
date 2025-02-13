@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Preparation</title>
+    <link rel="stylesheet" href="styles2.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      div {
+        color: pink;
+      }
+
+      .sentence {
+        color: green;
+      }
+
+      #sentence-id {
+        color: black;
+      }
+
+      .container {
+        display: flex;
+        width: 100vw;
+        justify-content: space-between;
+      }
+      .container a {
+        /* margin: 10px; */
+      }
+      .light-container img{
+       float: right;
+       float: none;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div style="color: red">Hello World</div>
+    <div class="sentence" id="sentence-id">This is Shah Jahan</div>
+
+    <div class="container">
+      <a href="">Shah Jahan</a>
+      <a href="">Shah Nawaz</a>
+      <a href="">Abbas</a>
+    </div>
+
+    <div class="box">Box 1</div>
+    <div class="box" style="background: lightcoral">Box 2</div>
+
+    <hr />
+
+    <hr />
+    <br />
+    <hr />
+    <br />
+    <div style="background: rgb(13, 123, 159); margin-right: -200x">Box1</div>
+    <div style="background: rgb(43, 44, 45)">Box2</div>
+
+    <hr /><hr />
+    <br />
+    <hr />
+    <br />
+
+    <hr />
+
+    <hr />
+    <br />
+    <hr />
+    <br />
+
+    <div class="container" style="width: 200px; border: 1px solid black">
+      <div
+        class="box"
+        style="background: rgb(156, 144, 238); margin-left: -30px"
+      >
+        I am a box with a negative margin!
+      </div>
+    </div>
+
+    <hr />
+
+    <hr />
+    <br />
+    <hr />
+    <br />
+
+    <hr />
+
+    <hr />
+    <br />
+    <hr />
+    <br />
+
+    <h1 style="visibility: hidden;">Shah Jahan</h1>
+
+    <h1 style="text-align: center;">Block Level vs Inline Elements</h1>
+
+    <h1 style="text-align: center;">Use of Float</h1>
+    <div class="light-container">
+            <img src="light_turn_off.jpeg" alt="">
+        </div>
+
+  </body>
+</html>

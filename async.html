@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asyns</title>
+    <style>
+      span {
+        font-size: larger;
+        color: brown;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">What is <span>async</span> in JavaScript?</h1>
+
+    <p>
+      JavaScript is <span>single-threaded</span>, meaning it executes code line
+      by line. However, certain operations like fetching data from a server,
+      reading files, or setting timeouts take time. Instead of blocking
+      execution, JavaScript allows asynchronous operations to run in the
+      background while the rest of the code continues.
+    </p>
+
+    <p>
+      The <span>async</span> keyword is used to define
+      <span>asynchronous functions</span>, which allow us to write code that
+      waits for a task to complete without blocking execution.
+    </p>
+    <p><span>Key Features</span></p>
+    <p><span>*</span>Always return a <span>Promise</span>.</p>
+    <p><span>*</span>Allows the use of <span>Await</span> inside them.</p>
+    <p><span>*</span>Make asynchronous code look synchronous.</p>
+
+
+    <h2 id="count">00</h2>
+    <button id="startCounter">Start Counter</button>
+    <button id="stopCounter">Stop Counter</button>
+
+
+    <script>
+      let heading = document.getElementById("heading");
+
+      const changeText = () => {
+        heading.innerHTML = "async is defined and explained below";
+      };
+
+      setTimeout(changeText, 5000);
+
+      // for (let i = 1; i <= 5; i++) {
+      //   setTimeout(() => {
+      //     console.log("Message " + i);
+      //   }, i * 1000);
+      // }
+
+      // function countdown(seconds) {
+      //   if (seconds > 0) {
+      //     console.log(seconds);
+      //     setTimeout(() => countdown(seconds - 1), 1000);
+      //   } else {
+      //     console.log("Time's up!");
+      //   }
+      // }
+
+      // countdown(5);
+
+      // let intervalId = setInterval(() => {
+      //   console.log("This will keep running...");
+      // }, 1000);
+
+      // setTimeout(() => {
+      //   clearInterval(intervalId);
+      //   console.log("Interval stopped!");
+      // }, 5000);
+
+      // function showTime() {
+      //   let now = new Date();
+      //   console.log(now.toLocaleTimeString());
+      // }
+
+      // let timeFunc = setInterval(showTime, 1000);
+
+      // setTimeout(() => {
+      //   clearInterval(timeFunc);
+      //   console.log(`Timer has been stopped after : ${10} seconds`);
+      // }, 10000);
+
+
+      // let count = 0;
+      // let counter = setInterval(() => {
+      //   count++;
+      //   console.log(`Count : ${count}`);
+        
+      // }, 1000);
+
+      // setTimeout(() => {
+      //   clearInterval(counter);
+      //   console.log(`The counter has been stopped after : ${count} times`);
+      // }, 10000);
+
+
+      // let startCounter = document.getElementById("startCounter");
+      // let stopCounter = document.getElementById("stopCounter");
+      // let counter = document.getElementById("count");
+      // let count = 0;
+      // let stopCount = null;
+
+      // startCounter.addEventListener("click",()=>{
+      //   stopCount =  setInterval(() => {
+      //       count++;
+      //       counter.innerHTML=count;
+      //     }, 1000);
+      // });
+
+      // stopCounter.addEventListener("click",()=>{
+      //   clearInterval(stopCount);
+      // });
+
+    </script>
+  </body>
+</html>

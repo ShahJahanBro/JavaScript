@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Day</title>
+    <style>
+
+      span{
+          font-weight: bold;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      #notes{
+          height: fit-content;
+          width: fit-content;
+          background-color: aqua; 
+          margin: 0 auto; 
+        }
+
+        #examples{
+          height: fit-content;
+          width: fit-content;
+          background-color:chocolate;
+          margin: 0 auto; 
+        }
+
+        h2{
+          text-align: center;
+        }
+
+        p{
+          margin: 10px;
+          padding: 10px;
+        }
+        #text{
+            width: fit-content; 
+        }
+  </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Document Object Model (DOM)</h1>
+
+    <div id="notes">
+        <h2 >Notes</h2>
+    <p>
+      The DOM (Document Object Model) is a structured representation of an HTML
+      document. It allows JavaScript to <span>dynamically update content, styles, and
+      structure</span> on a webpage. </p>
+      <p>The DOM represents an HTML document as a <span>tree</span>. Each element in HTML is a node in the tree.</p>
+   
+    <p>Returns a collection (HTMLCollection) of elements with the given class. when selected by CLASS
+        </p>
+        <p>Two commonly used <span>collections of elements</span> are <span>HTMLCollection and NodeList.</span></p>
+    </div>
+
+    <div id="examples">
+        <h2 >Practice</h2>
+        <p id="para" onclick="changeTheTextColor()">Click to change the color of the text</p>
+    </div>
+
+    <h1>Welcome to the world of DOM (Document Object Model)</h1>
+    <p>
+      In JavaScript, functions are <span style="font-weight: bold; color: brown; font-size: large;">first-class objects</span>,
+      meaning they are objects themselves.
+    </p>
+
+    <img src="" alt="">
+
+    <div class="container">
+      <h1 class="name">Shah Jahan</h1>
+      <h1 class="one">Computer Science</h1>
+      <h1>Data Science</h1>
+      <h1>AI</h1>
+      <h1>Machine Learning</h1>
+    </div>
+
+    <div id="example">
+        <span style="display: none;">Hidden Text</span>
+        <span style="color: blue;">How is Everything...</span>
+        Visible Text
+    </div>
+
+
+    <h1 id="text">Hello! This is Shah Jahan</h1>
+    <button id="btn">Chnage the Color</button>
+
+
+    <div class="wrapper">
+
+        <p class="fpara">First Paragraph</p>
+        <p class="spara">Second Paragraph</p>
+        <p class="tpara">Third Paragraph</p>
+        <p class="fpara">Fourth Paragraph</p>
+
+    </div>
+    <script>
+      function greetings() {
+        console.log("Hi...");
+      }
+      greetings();
+      console.dir(greetings); //The console.dir() method is used to display an interactive list of the properties of the greetings function in the browser's developer console.
+
+      const obj = {
+        name: "Shah Jahan",
+        depart: "Coomouter Science",
+        city: "Sukkur",
+      };
+      console.log(obj.name);
+      console.dir(obj);
+
+      console.log(document.title);
+      document.title = 'An Introduction to DOM...'
+      function changeTheTextColor(){
+            document.getElementById("para").style.color="yellow"
+        }
+        let para = document.getElementById("para");
+        console.log(para.innerHTML);
+
+        // const tags = document.getElementsByTagName("h1"); // returns a HTMLCOLLECTION 
+// console.log(tags);
+// const heading = document.querySelectorAll(".one")
+// console.log(heading);
+
+// const all = document.querySelector(".container");
+// const all = div.querySelector(".one");
+
+// const chk = document.getElementById("example");
+// console.log(chk);
+
+// const name = document.querySelector(".name").getAttribute("name");
+
+ let example = document.getElementById("example");
+
+let heading = document.createElement("h1");
+
+heading.textContent = "This is Shah Jahan";
+
+example.appendChild(heading);
+example.insertAdjacentElement('afterend',heading);
+
+
+const btn = document.getElementById("btn");
+const text = document.getElementById("text");
+
+btn.addEventListener("click", (event) =>{
+    text.id="text"
+    text.style.backgroundColor="blue";
+    text.style.color="yellow";
+    text.style.margin="20px 20px";
+    text.style.padding="20px 20px"
+});
+
+let paras = document.querySelectorAll("p");
+
+for (let i = 0; i < paras.length; i++) {
+    para = paras[i];
+    para.addEventListener("click",()=>{
+        alert(`You have clicked on Paragraph : ${i+1}`);
+    });
+}
+    </script>
+    
+  </body>
+</html>

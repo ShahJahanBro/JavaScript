@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+    <style>
+        span{
+            font-size: 20px;
+            color: brown;
+            font-weight: 900;
+        }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">fetch() in JavaScript</h1>
+    <p>
+      The <span>fetch()</span> function in JavaScript is used to make network requests (API
+      calls). It returns a <span>Promise</span> that resolves to the response of the request.
+    </p>
+
+    <script>
+        let response = fetch("https://randomuser.me/api/")
+    .then(response => response.json()) // Convert response to JSON
+    .then(data => console.log(data.results[0])) // Extract user details
+    .catch(error => console.error("Error:", error));
+    </script>
+  </body>
+</html>

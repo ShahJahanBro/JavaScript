@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Example</title>
+    <style>
+        .container {
+            width: 600px;
+            border: 1px solid #d51717;
+            padding: 10px;
+        }
+
+        .float-image {
+            float: right; 
+            width: 150px; 
+        }
+
+        .text {
+            overflow: hidden; 
+        }
+
+        .main{
+            display: flex;
+            border: 1px solid #d51717;
+            width: fit-content;
+            /* padding: 5px; */
+        }
+
+        .main div{
+            padding: 5px;
+            border: 1px solid #157234;
+        }
+
+        .div-1{
+            background-color: aqua;
+        }
+        .div-2{
+            background-color: rgb(201, 31, 119);
+        }
+        .div-3{
+            background-color: rgb(115, 0, 255);
+        }
+
+        .div-1:hover{
+            background-color: #7b00ff;
+        }
+        .div-2:hover{
+            background-color: rgb(220, 231, 209);
+        }
+        .div-3:hover{
+            background-color: rgb(127, 255, 0);
+        }
+
+        .cont > div{
+            color: #157234;
+        }
+
+        .main-cont{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="light_turn_off.jpeg" alt="Sample Image" class="float-image">
+    <div class="text">
+        <h2>Floating Example</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et quam sit amet urna dictum interdum at at sem. Integer eget gravida ligula, ac efficitur justo. Curabitur vel tincidunt lacus. Vivamus consequat velit sit amet nisi dignissim, nec bibendum libero sagittis. Fusce aliquet, nunc at fermentum iaculis, ex elit elementum nunc, at posuere lorem felis a ex.</p>
+    </div>
+</div>
+
+
+    <h1 style="text-align: center;">Practice</h1>
+
+    <div class="main">
+        <div class="div-1">Day 01</div>
+        <div class="div-2">Day 02</div>
+        <div class="div-3">Day 03</div>
+    </div>
+
+    <br>
+    <div class="cont">
+        <div class="1">Shah Jahan</div>
+        <div>Shah Nawaz</div>
+        <div>Abbas</div>
+        <div>Yaseen</div>
+        <div>Ahad</div>
+    </div>
+
+    <div class="main-cont">
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+    </div>
+</body>
+</html>

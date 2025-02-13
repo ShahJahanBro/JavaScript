@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script>
+			//var array = [10000,9000,20000,25000,100000];
+			//var array = [1, 2, 3, 4, 5];
+			var array = [12, 17, 18, 20, 10, 25, 32, 17, 45];
+			var sos = 0;
+			function square(currentValue, index, modifiedArray){
+				let total = currentValue ** 2;
+				sos += total;
+				modifiedArray[index] = total;
+			}
+			
+			function increment(currentValue){
+				if(currentValue<=10000)
+					currentValue += currentValue * 0.25;
+				else if(currentValue<=25000)
+					currentValue += currentValue * 0.2;
+				else
+					currentValue += currentValue * 0.15;
+					
+				return currentValue;
+			}
+			
+			let checkAge = (age) => age >= 18;
+			
+			new_array = array.filter(checkAge);
+			document.write(new_array+"<br />");
+			document.write(array+"<br />")
+		</script>
+		<style>
+			#myDiv{
+				background-color:red;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="moveUser()">google</button>
+		<div id="myDiv">This is a div</div>
+		<div id="myDiv">This is a div</div>
+	</body>
+</html>

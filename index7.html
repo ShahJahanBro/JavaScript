@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p{
+            color: red;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .block {
+            background-color: lightgray;
+            border: 1px solid black;
+            height: 50px;
+            flex: 1 1 calc(33.33% - 20px);
+        }
+        .block.full-width {
+            flex: 1 1 100%;
+        }
+
+        .bio::first-letter{
+            color: rgb(81, 134, 134);
+            font-size: 200px;
+        }
+        .bio::first-line{
+            color: rgb(48, 228, 69);
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="upper">
+        <p>I am the Upper div P</p>
+        <h1>I am the Upper div h1</h1>
+    </div>
+    <p>Shah Jahan</p>
+    <p>Shah Jahan</p>
+    <div>
+        <p>I am the Lower div P</p>
+    </div>
+
+
+    <div class="container">
+        <div class="block">Block 1</div>
+        <div class="block">Block 2</div>
+        <div class="block">Block 3</div>
+        <div class="block">Block 4</div>
+        <div class="block">Block 5</div>
+        <div class="block full-width">Block 6</div>
+        <p class="bio">Lorem ipsum dolor sit amet consectetur actetur.xcepturi laudantium architecto laboriosam. Illo quisquam dignissimos pariatur voluptas saepe totam natus tenetur maxime, ea odio error eius! Quod consequatur hic consectetur.
+        Voluptates enim, consectetur dolorem commodi digl deserunt modi molestias cupiditate odio accusantium mollitia voluptatem culpa excepturi pariatur rerum quaerat laborum amet obcaecati ex dolor alias maxime iure dolorum? Amet.
+        Sapiente, reprehenderit! Placeat perferendis provident, fugiat nobis odit facere. Quis veritatis totam nihil quam? Nam enim, labore earum velit necessitatibus architecto repudiandae modi, qui dolorum ipsa doloribus dicta maiores omnis.
+       dus illum iusto provident omnis. Unde, ut ab in, repudiandae quidem perspiciatis maxime obcaecati accusantium expedita laboriosam, eius nihil. Deleniti est temporibus eum.</p>
+    </div>
+
+</body>
+</html>

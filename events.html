@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in Detail</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4; /* Light background for better visibility */
+      }
+
+      #btn {
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #007bff; /* Primary blue color */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      #btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+      }
+
+      #btn:active {
+        background-color: #004099;
+        transform: translateY(1px); /* Press effect */
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Click me</button>
+
+    <form id="myForm">
+      <input type="text" id="username" required placeholder="Enter your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="parent" style="padding: 20px; background: lightblue;">
+      <button id="child">Click Me</button>
+    </div>
+    <script>
+      let btn = document.getElementById("btn");
+
+      // btn.onclick = () =>{ // Only one event handler can be assigned per event.
+      //     alert("Button Clicked...");
+      // };
+
+      //The most flexible and recommended way is using addEventListener(), which allows multiple event handlers for the same event.
+      // btn.addEventListener("click", ()=>{
+      //     alert("Button Clicked once...");
+      // });
+
+      // btn.addEventListener("click", ()=>{
+      //     alert("Button Clicked again...");
+      // });
+
+      // chnage the color while hovering
+
+      btn.addEventListener("mouseover", () => {
+        btn.innerHTML = "Being Hovered";
+        btn.style.backgroundColor = "Yellow";
+        btn.style.color = "Green";
+      });
+
+      btn.addEventListener("mouseout", () => {
+        btn.innerHTML = "Click me";
+        btn.style.backgroundColor = "#007bff";
+      });
+
+      let form = document.getElementById("myForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); 
+        let name = document.getElementById("username").value;
+        alert("Hello, " + name);
+      });
+
+      document.getElementById("btn").addEventListener("click", function (event) {
+          console.log("Event Type:", event.type);
+          console.log("Target Element:", event.target);
+          console.log("Mouse X Position:", event.clientX);
+          console.log("Mouse Y Position:", event.clientY);
+        });
+
+        document.getElementById("parent").addEventListener("click", function () {
+    alert("Parent Clicked!");
+  });
+
+  document.getElementById("child").addEventListener("click", function (event) {
+    alert("Button Clicked!");
+    event.stopPropagation(); 
+  });
+    </script>
+  </body>
+</html>

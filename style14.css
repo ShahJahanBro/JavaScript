@@ -1,0 +1,69 @@
+.greeting{
+    text-align: center;
+    font-weight: 32px;
+    padding: 25px;
+}
+.lorem{
+    border-width: 5px;
+    /* border-style: dotted; */
+    /* border-style: dashed; */
+    /* border-style: double; */
+    /* border-style: groove; */
+    /* border-style:inherit; */
+    /* border-style:initial; */
+    /* border-style:inset; */
+     border: 10px groove pink; /*shorthand for border-width,style,color
+    /* border-color: blueviolet; */
+    /* border-bottom: 10px groove pink; */
+    
+
+    /* for Rounded Borders */
+    border-radius: 10px;
+}
+.main_header{
+    justify-content: center;
+    background-color: antiquewhite;
+    margin: 15px;
+    padding: 15px;
+    display: flex;
+}
+
+h1{
+    color: blueviolet;
+}
+
+.name{
+    background-color: brown;
+    color: yellow;
+    max-width: 35%;
+    padding-left: 10px;
+    margin: 10px;
+}
+li{
+    font-weight: 700;
+}
+.name:hover{
+    color: beige;
+    background-color: black;
+}
+ul li:hover{
+    color: yellow;
+}
+.html{
+    background-color: blue;
+}
+#html:hover{
+    background-color: black;
+    color: aquamarine;
+}
+[class] {
+    background-color: rgb(182, 111, 18);
+}
+
+.html,.prom{
+    background-color: gray;
+}
+.Hello:hover{
+    color: gold;
+    background-color: blue;
+}

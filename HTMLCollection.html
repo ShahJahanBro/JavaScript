@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTMLCollection Example</title>
+</head>
+<body>
+    <h2 class="heading">Heading 1</h2>
+    <h2 class="heading">Heading 2</h2>
+    <h2 class="heading">Heading 3</h2>
+    <p class="para">Paragraph 1</p>
+    <p class="para">Paragraph 2</p>
+    <button onclick="addHeading()">Add Heading</button>
+    <button onclick="addPara()">Add Paragaph</button>
+    <script>
+        function addHeading() {
+            let newHeading = document.createElement("h2");
+            newHeading.className = "heading";
+            newHeading.innerText = "New Heading";
+            document.body.appendChild(newHeading);
+            
+            let headings = document.getElementsByClassName("heading");
+            console.log(`Length of Headings : ${headings.length}`); 
+        }
+
+
+        function addPara(){
+            let newPara = document.createElement("p");
+            newPara.className="para"
+            newPara.innerHTML="New Paragraph"
+            document.body.appendChild(newPara);
+
+            let paras = document.getElementsByClassName("para");
+            console.log(`Length of Paragraphs : ${paras.length}`);
+        }
+    </script>
+
+</body>
+</html>

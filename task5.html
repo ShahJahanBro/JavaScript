@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Package Comparison</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .card {
+            width: 300px;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .card .price {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+        <h2>Package 1</h2>
+        <ul>
+            <li><strong>Price:</strong> <span class="price">$50/month</span></li>
+            <li><strong>Speed:</strong> 100 Mbps</li>
+            <li><strong>Data Limit:</strong> Unlimited</li>
+        </ul>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+        <h2>Package 2</h2>
+        <ul>
+            <li><strong>Price:</strong> <span class="price">$40/month</span></li>
+            <li><strong>Speed:</strong> 75 Mbps</li>
+            <li><strong>Data Limit:</strong> 500 GB/month</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+

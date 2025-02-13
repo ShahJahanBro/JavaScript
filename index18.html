@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      .list {
+        border: 4px solid chocolate;
+        width: 50vw;
+      }
+      .list ul li {
+        /* border-bottom: 4px solid chocolate;  */
+        border: 1px solid gray;
+        padding: 5px;
+      }
+      .list .nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 5px;
+
+        list-style: none;
+        gap: 20px;
+      }
+      .columns{
+        display: flex;
+        margin-top: 50px;
+        gap: 1rem;
+        width: 800px;
+        border: 2px solid firebrick;
+      }
+
+      .columns > *{
+        background-color: aqua;
+        padding: 5px;
+        flex-shrink: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list">
+      <ul class="nav">
+        <li>Shah Jahan</li>
+        <li>Shah Nawaz</li>
+        <li>Abbas</li>
+        <li>Daud</li>
+        <li>Saud</li>
+        <li>Rauf</li>
+        <li>Ahad</li>
+        <li>Baqar</li>
+      </ul>
+    </div>
+
+    <div class="columns">
+      <article>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea sit
+        debitis suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea sit
+        debitis suscipit
+      </article>
+      <article>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea sit
+        debitis suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea sit
+        debitis suscipit
+      </article>
+      <article>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea sit
+        debitis suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea sit
+        debitis suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ea sit
+        debitis suscipit
+      </article>
+    </div>
+  </body>
+</html>

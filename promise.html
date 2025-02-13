@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    
+    <p>Promise is a  Promise of code execution...</p>
+    <p>Used for Parallel execution</p>
+
+
+    <script>
+        // const promiseOne = new Promise((resolve, reject)=>{
+        //     let success = false;
+
+        //     if (success) {
+        //         resolve("Task completed Successfully...");
+        //     } else {
+        //         reject("Task Failed...");
+        //     }
+        // });
+        // console.log(promiseOne);
+        
+        // new Promise((resolve)=>{
+        //     setTimeout(()=>{
+        //         console.log("Async Task");
+        //         resolve("ShahJahan");
+        //     },2000);
+        // }).then((name)=>{
+        //     console.log(`Async Task 2 resolved by ${name}` );
+        // });
+
+
+        // let p1 = new Promise((resolve,reject)=>{
+        //     console.log("The promise is pending");
+        //     setTimeout(() => {
+        //         console.log('Promise has been fulfilled');
+        //         resolve("shah jahan");
+        //     }, 3000);
+        // });
+
+        // let p2 = new Promise((resolve,reject)=>{
+        //     console.log("The promise is pending...");
+        //     setTimeout(() => {
+        //         console.log('Promise has been rejected...');
+        //         reject(new Error("I am an error due to rejection..."));
+        //     }, 3000);
+        // });
+
+        // p1.then((name)=>{
+        //     console.log(`Promise resolved by : ${name}`);
+        // });
+
+        // p2.catch((error)=>{
+        //     console.log("Some error occured in P2");
+            
+        // });
+
+
+        // understanding Async and Await
+
+        // async function greet(){
+        //     return "I am Shah Jahan";
+        // }
+
+        // // console.log(greet());
+        // greet().then(console.log);
+
+
+        const func = async () => {
+            let promise = new Promise((resolve)=>{
+                setTimeout(() => {
+                    resolve("I was waiting to be resolved...");
+                }, 5000);
+            });
+
+            console.log("Let's see...");
+            let result = await promise;
+            console.log(result);
+            console.log("I was called after the promise");
+        }
+        func();
+        console.log("I was called after the function");
+
+    </script>
+</body>
+</html>

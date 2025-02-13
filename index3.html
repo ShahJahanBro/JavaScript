@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+   <script>
+        function showMsg(){
+            alert("Hello, I am Internal JavaScript...");
+        }
+
+        function changeDesign(){
+            const perInfo = document.getElementById("info");
+            perInfo.style.color="tomato";
+            perInfo.style.textAlign="center"
+        }
+
+        function table(num,tbl){
+            // let tbl = num;
+            while(num<=10){
+                console.log(tbl+" * "+num+" = "+tbl*num);
+                num++;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Helllo World...</h1>
+
+    <button onclick="alert('Hello, I am inline JavaScript...')">Click Inline JS</button>
+    <button onclick="showMsg()">Click Internal Js</button>
+    <button onclick="showMessage()">Click External Js</button>
+    <h1>On clicking a Button the Written Paragraph's Design must change</h1>
+    <p id="info">I am a Paragraph, I have a greate Information in me...</p>
+
+    <button onclick="changeDesign()">Change Design</button>
+
+
+    <button onclick="table(1,5)">Generate a Table</button>
+
+    <div>
+        <p>Shah Jahan</p>
+        <p>Shah Nawaz</p>
+        <p>Abbas</p>
+        <p>Ahad</p>
+    </div>
+
+
+
+
+    <script src="script3.js"></script>
+ 
+</body>
+</html>

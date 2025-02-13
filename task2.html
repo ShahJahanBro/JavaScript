@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<style>
+			.parent{
+				display : flex;
+				background-color: blue;
+				padding: 5px;
+				flex-flow: row wrap;
+				justify-content: center;
+				height: 100%;
+				align-items: center;
+			}
+			
+			.parent > div{
+				background-color: silver;
+				padding : 5px;
+				margin:5px;
+				width: 100px;
+			}
+		</style>
+		<script>
+			function changeImage(){
+				console.log(this.innerHTML);
+			}
+			let change = () => {
+				console.log(this.innerHTML);
+			}
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<!--div class="parent">
+			<div>
+				Div 1
+			</div>
+			<div>
+				Div 2
+			</div>
+			<div>
+				Div 3
+			</div>
+		</div-->
+		<img id="myimage" src="pic_bulboff.gif" />
+		<button onclick="changeImage()" >Turn On</button>
+		<button onclick="changeImage()" >Turn Off</button>
+		<button onclick="changeImage()" >Log In</button>
+		<button onclick="change()" >Log Off</button>
+		<button onclick="change()" >Exit</button>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Simple Selectors */
+      /* h1 {
+        color: blue;
+        background-color: aquamarine;
+        width: fit-content;
+        padding: 10px;
+      }
+
+      .p-tag{
+        color: brown;
+      }
+
+      p.p-tag{
+        background-color: blueviolet;
+      }
+
+ */
+
+      /* Combinators Selectors */
+
+      /* .div-2 p, .div-2 h1  {
+        color: blueviolet;
+      }
+        */
+
+      /* div p{
+            color: rgb(194, 112, 18);
+        } */
+
+      /* div>p{
+            color: rgb(194, 112, 18);
+        } */
+      /* .div-2>p{
+            color: rgb(194, 112, 18); 
+        } */
+
+        /* h2+p {
+        color: rgb(194, 112, 18);
+      } */
+/* 
+      h2~p {
+        color: rgb(194, 112, 18);
+      } */
+
+
+      h2:hover{
+        color: rgb(194, 112, 18);
+      }
+
+      p:first-child{
+        color: rgb(194, 112, 18);
+      }
+
+      h1:first-child{
+        color: aqua;
+      }
+      p:last-child{
+        color: aqua;
+      }
+      p:nth-last-child(4){
+        color: aqua;
+      }
+      h1::before {
+  content: "Note: ";
+  color: red;
+}
+    p::after{
+        content: " Thank you so much...";
+        color: palevioletred;
+    }
+    p::first-letter {
+  font-size: 200%;
+  color: blue;
+}
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <h1>Hello World!</h1>
+      <h1>This is Shah Jahan...</h1>
+      <h2>How about your CSS Skills</h2>
+      <p class="p-tag">I am applying my CSS Skills to test myself...</p>
+      <p>I wellcome you here!</p>
+    </div>
+    <hr />
+
+    <div class="div-2">
+      <p>Abbas</p>
+      <h1>HTML</h1>
+      <h1>CSS</h1>
+      <p>Shah Jahan</p>
+      <p>Shah Nawaz</p>
+      <h2>BBA</h2>
+      <p>Abbas</p>
+      <span>Computer Science</span>
+      <span>AI</span>
+      <p>Sukkur IBA</p>
+
+    </div>
+  </body>
+</html>

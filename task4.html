@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<script>
+			function display(msg){
+				document.getElementById("demo").innerHTML = msg;
+			}
+			
+			
+			let promise = new Promise(function (myResolve, myReject){
+			
+			let x = 5;
+			
+			setTimeout(function (){
+				if(x==5)
+					myResolve("successful");
+				else
+					myReject("Error");	
+				}, 5000 );
+		
+			});				
+			
+		
+			function runPromise(){
+				//let response = await promise
+				//display("This is my test msg");
+				promise.then(
+					function (msg){
+						display(msg);
+					},
+					function (msg){
+						display(msg);
+					}
+				);
+				display("This is my test msg");
+			}
+		</script>
+	</head>
+	<body>
+		<div id="demo">Some Text</div>
+		<button onClick="runPromise()">Run</button>
+	</body>
+</html>
