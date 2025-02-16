@@ -39,14 +39,16 @@
     <button id="stopCounter">Stop Counter</button>
 
 
-    <script>
-      let heading = document.getElementById("heading");
+    <p id="demo"></p>
 
-      const changeText = () => {
-        heading.innerHTML = "async is defined and explained below";
-      };
+     <script>
+      // let heading = document.getElementById("heading");
 
-      setTimeout(changeText, 5000);
+      // const changeText = () => {
+      //   heading.innerHTML = "async is defined and explained below";
+      // };
+
+      // setTimeout(changeText, 5000);
 
       // for (let i = 1; i <= 5; i++) {
       //   setTimeout(() => {
@@ -117,6 +119,149 @@
       //   clearInterval(stopCount);
       // });
 
+
+      // const f1 = ()=>{
+      //   console.log("This is Function One");
+      // }
+
+      // const f2 = ()=>{
+      //   console.log("This is Function Two");
+      // }
+
+      // const f3 = ()=>{
+      //   console.log("This is Function Three");
+      // }
+
+      // f1();
+      // f3();
+      // f2();
+
+      // NOTE: JS Functions are executed in the order they are called.
+
+      // const display = (sum,name)=>{
+      //   console.log(`Sum of two numbers is : ${sum} calculated by : ${name}`);
+        
+      // }
+
+      // const calculateSum = (n1,n2)=>{
+      //   return n1+n2;
+      // }
+
+      // let res =  calculateSum(5,5);
+      // display(res,"Shah Jahan");
+      
+      // second method:
+
+      // const display = (sum,name)=>{
+      //   console.log(`Sum of two numbers is : ${sum} calculated by : ${name}`);
+        
+      // }
+
+      // const calculateSum = (n1,n2)=>{
+      //   let res = n1+n2;
+      //   display(res,"Shah Jahan");
+      // }
+
+      // calculateSum(5,5);
+      
+      // JS Callbacks
+
+      // const display = (sum,name)=>{
+      //   console.log(`Sum of two numbers is : ${sum} calculated by : ${name}`);
+        
+      // }
+
+      // const calculateSum = (n1,n2, callback)=>{
+      //   let res = n1+n2;
+      //   console.log("Before the callback functions");
+      //   callback(res,"Shah Jahan");
+      //   console.log("After the callback functions");
+      // }
+
+      // calculateSum(5,5,display);
+
+      // using callback function to remove -ve numbers from an Array;
+
+      // const myArray = [1,2,3,4,5,6,7,8,9,-1,-2,-3,-4,-5,-6,-7,-8,-9]
+      
+      // const func = (myArray, callback)=>{
+      //   const positiveNumArray = myArray.filter(callback);
+      //   console.log(positiveNumArray);
+        
+      // }
+      
+      // const callback = (num)=>{
+      //   if (num>0) {
+      //     return num;
+      //   }
+      // }
+      
+      // func(myArray, callback);
+
+      
+
+      // const positiveNumFunc = (arr,callback)=>{
+      //   const positiveNumArray = []
+
+      //   for (const num of arr) {
+      //     if (callback(num)) {
+      //       positiveNumArray.push(num)
+      //     }
+      //   }
+      //   return positiveNumArray;
+      // }
+
+      // const arrPosNum = positiveNumFunc(myArray, (num)=>{
+      //   return num >= 0;
+      // })
+
+      // console.log(arrPosNum);
+      
+       const f1 = ()=>{
+        console.log("This is Function One");
+      }
+
+      const f2 = ()=>{
+        console.log("This is Function Two");
+      }
+
+      const f3 = ()=>{
+        console.log("This is Function Three");
+      }
+
+      f1();
+      setTimeout(f2, 3000);
+      setTimeout(() => {
+        console.log("I should wait for 4 seconds");
+      }, 4000);
+      f3();
+      
+
+      async function displayName() {
+        return "My name is Shah Jahan"
+      }
+      // console.log(displayName());
+      
+      displayName().then((name)=>{
+        console.log(`This is Promise : ${name}`);
+      });
+
+  async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve) {
+    setTimeout(() => resolve("I love You !!"), 6000); // Resolves after 2 seconds
+  });
+
+  document.getElementById("demo").innerHTML = await myPromise;
+}
     </script>
   </body>
 </html>
